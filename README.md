@@ -1,0 +1,36 @@
+# my_disposable_env
+my disposable_env
+
+### Macの環境設定(by GUI)
+
+- screen saverを切る
+
+  1. SystemPreference => Battery => Battery => Turn display off after(=> Slide to Never)
+
+- F1, F2などのキーを通常の標準のfnKeyとして利用するように設定する
+
+  1. SystemPreference > Keyboard > Keyboard > check ```Use F1, F2, etc... checkbox.```
+
+- 各画面にショートカットを割り当てる
+
+  1. デスクトップを10画面作成
+
+  2. ショートカットの設定を行う。
+
+     SystemPreference > Keyboard > Shortcuts > Mission Controll > Check all checkbox to switch Desktop x
+
+  3. スペースの自動並び替えをoffにする
+
+    SystemPreference > MissionControl > remove check from ```Automatically Rearrange Spaces...```
+
+  4. 各appを複数画面に割り当てる(任意)
+
+### ツールのinstall
+
+### Macの環境設定(by CGI)
+
+- 必要なsoftwareのinstall
+
+
+- 必要なtoolのinstall
+
