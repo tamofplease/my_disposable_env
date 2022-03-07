@@ -1,11 +1,11 @@
-if [ -f ~/.zsh_config/.aliases ]; then
-. ~/.zsh_config/.aliases
+if [ -f ~/.zsh_config/aliases ]; then
+. ~/.zsh_config/aliases
 fi
 
-if [ -f ~/.zsh_config/.styles ]; then
-. ~/.zsh_config/.styles
+if [ -f ~/.zsh_config/styles ]; then
+. ~/.zsh_config/styles
 fi
 
-if [ -f ~/.zsh_config/.envpaths ]; then
-. ~/.zsh_config/.envpaths
+if [ -f ~/.zsh_config/envpaths ]; then
+. ~/.zsh_config/envpaths
 fi
