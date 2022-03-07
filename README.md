@@ -25,7 +25,18 @@ my disposable_env
 
   4. 各appを複数画面に割り当てる(任意)
 
-### ツールのinstall
+
+- bottomNavをdefaultで非表示にする
+
+  1. SystemPreference > Dock & Menu Bar > Dock & Menu Bar
+
+### 諸々install
+
+- [chrome](https://www.google.com/chrome/?brand=CHBD&brand=SSPA&gclid=CjwKCAiA1JGRBhBSEiwAxXblwbR0wHVSOQkhO58aEsUIs-03iS6GZvxQlf2ahaO6oztFLXuzs84-phoCuCgQAvD_BwE&gclsrc=aw.ds)
+
+- [iterm2](https://iterm2.com/)
+
+
 
 ### Macの環境設定(by CGI)
 
