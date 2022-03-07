@@ -6,6 +6,11 @@ genSshEnv:
 	cp ./ssh/config ~/.ssh/config
 	cp cat ~/.ssh/keys/ed25519_git.pub | pbcopy
 
+
+.PHONY: prepare_zsh
+	mkdir -p ~/.zsh
+	mkdir -p ~/.zsh_config
+
 .PHONY: set_zsh
 set_zsh:
 	cp ~/.zsh_config/* ./zsh/zsh_config
@@ -13,7 +18,6 @@ set_zsh:
 
 .PHONY: load_zsh
 load_zsh:
-	mkdir ~/.zsh ~/.zsh_config
 	cp ./zshrc ~/.zshrc
 	cp ./zsh_config/* ~/.zsh_config/
 	source ~/.zshrc
