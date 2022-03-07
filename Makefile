@@ -16,7 +16,7 @@ prepare_zsh:
 set_zsh:
 	cp ~/.zsh_config/* ./zsh/zsh_config
 	cp ~/.zshrc ./zsh/zshrc
-	cp ~/.zsh/* ./zsh/
+	cp -rf ~/.zsh/* ./zsh/
 
 .PHONY: load_zsh
 load_zsh:

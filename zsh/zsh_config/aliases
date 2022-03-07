@@ -1,5 +1,3 @@
-alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin brew"
-
 ### for flutter
 
 alias frs='fvm flutter run --dart-define=FLAVOR=staging'
