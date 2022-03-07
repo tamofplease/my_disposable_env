@@ -1,0 +1,58 @@
+alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin brew"
+
+### for flutter
+
+alias frs='fvm flutter run --dart-define=FLAVOR=staging'
+alias frsd='fvm flutter run --dart-define=FLAVOR=staging -d $1'
+alias frj='fvm flutter run --dart-define=COVID19_API_KEY=FP0eDHkV3v7yvyaYftX5K6yIpf9J6PxNaUz73G1J'
+alias frja="fvm flutter run --dart-define=APP_ID_SUFFIX=.dev --dart-define=MONACA_GRAPHQL_API_KEY=lj1fGUOASF3YIBEKD7aX4nIkdLZmphz4fml07FD9 --dart-define=MONACA_GRAPHQL_AUTHORITY=dev-api.newsdigest.jp --dart-define=COVID19_API_KEY=FP0eDHkV3v7yvyaYftX5K6yIpf9J6PxNaUz73G1J --dart-define=GOOGLE_MAPS_API_KEY=AIzaSyCqUOBX5hKLTyK43Tfzn-KYvgiDX-w55QE --dart-define=FIREBASE_COVID19_API_KEY=AIzaSyCXloRxnrcZOXDa6YH3kYXwwAs3kWCudxQ --dart-define=FIREBASE_COVID19_APP_ID=1:403716822934:ios:fef24e8ae8fd05c6ebefb7 --dart-define=FIREBASE_COVID19_PROJECT_ID=jxpress-71d86f --dart-define=FIREBASE_COVID19_MESSAGING_SENDER_ID=403716822934 --dart-define=FIREBASE_COVID19_DATABASE_URL=https://jxpress-71d86f.firebaseio.com --dart-define=FIREBASE_COVID19_STORAGE_BUCKET=jxpress-71d86f.appspot.com --dart-define=FIREBASE_COVID19_IOS_BUNDLE_ID=jp.newsdigest.moduleCoronaBousai --dart-define=FIREBASE_COVID19_IOS_CLIENT_ID=403716822934-dceeloi1rnnbk28g84q15q0kq4or1dm2.apps.googleusercontent.com  --dart-define=ADMOB_APP_ID=ca-app-pub-3940256099942544~3347511713 --dart-define=BUILD_ENV=dev"
+alias frjc="fvm flutter run --dart-define=COVID19_API_KEY=FP0eDHkV3v7yvyaYftX5K6yIpf9J6PxNaUz73G1J --dart-define=FIREBASE_COVID19_API_KEY=AIzaSyCXloRxnrcZOXDa6YH3kYXwwAs3kWCudxQ --dart-define=FIREBASE_COVID19_APP_ID_ANDROID=1:403716822934:android:bf9898bafdd0c304ebefb7 --dart-define=FIREBASE_COVID19_APP_ID_IOS=1:403716822934:ios:fef24e8ae8fd05c6ebefb7 --dart-define=FIREBASE_COVID19_PROJECT_ID=jxpress-71d86f --dart-define=FIREBASE_COVID19_MESSAGING_SENDER_ID=403716822934 --dart-define=FIREBASE_COVID19_DATABASE_URL=https://jxpress-71d86f.firebaseio.com --dart-define=FIREBASE_COVID19_STORAGE_BUCKET=jxpress-71d86f.appspot.com --dart-define=FIREBASE_COVID19_IOS_BUNDLE_ID=jp.newsdigest.moduleCoronaBousai --dart-define=FIREBASE_COVID19_IOS_CLIENT_ID=403716822934-dceeloi1rnnbk28g84q15q0kq4or1dm2.apps.googleusercontent.com --dart-define=FIREBASE_COVID19_ANDROID_CLIENT_ID=403716822934-o1421nkj52jmr8tq3vdqot0e38viljkb.apps.googleusercontent.com"
+alias frjv='fvm flutter run --dart-define=API_KEY=FP0eDHkV3v7yvyaYftX5K6yIpf9J6PxNaUz73G1Ji -v'
+alias fpg='fvm flutter pub get'
+alias frbc='fvm flutter pub run build_runner build --delete-conflicting-outputs'
+alias frb='fvm flutter pub run build_runner build'
+alias frjd='fvm flutter run --dart-define=API_KEY=FP0eDHkV3v7yvyaYftX5K6yIpf9J6PxNaUz73G1J -d $1'
+alias fd='fvm flutter devices'
+alias ft='fvm flutter test'
+alias fr='fvm flutter run'
+alias fa='fvm flutter analyze'
+alias ffc='fvm flutter clean'
+alias fpga='fvm flutter pub cache clean && pub global activate fvm && fvm flutter pub get'
+alias fpu='fvm flutter pub upgrade'
+
+### for git
+
+alias gaa='git add .'
+alias gb='git branch'
+alias gbc='git branch --show-current | c'
+alias gcm='git commit -m'
+alias gc='git commit'
+alias gs='git stash'
+alias gfo='git fetch origin'
+alias gpl='git pull'
+alias gps='git push'
+alias gpso='git push origin'
+alias gplo='git pull origin'
+alias gplod='git pull origin develop'
+alias gpsod='git pull origin develop'
+alias gco='git checkout'
+
+### for docker
+alias d='docker'
+alias d-c='docker-compose'
+alias dc='docker container'
+alias di='docker image'
+alias dn='docker network'
+alias dv='docker volume'
+
+
+### Util
+alias c='pbcopy'
+alias ovc='open $1 -a  /Applications/Visual\ Studio\ Code.app/'
+alias fnd="find / -name $1 -print 2>/dev/null"
+
+### Python
+alias aln="pushd ./db && alembic revision -m $1 && popd"
+alias migrate="pushd ./db && alembic upgrade head && popd"
+
+

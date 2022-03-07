@@ -1,0 +1,24 @@
+### for syntax analysis
+export PATH="$PATH:/opt/bison/bin:/opt/flex/bin:/opt/qt@5/bin"
+
+### for ruby
+export PATH="$PATH:/Users/washi38/.rbenv/shims"
+
+### for go
+export PATH="$PATH:$HOME/go/bin"
+
+### for C
+export PATH="$PATH:/usr/local/opt/gnupg@2.2/bin"
+
+### for python
+export PATH="$PATH:/opt/anaconda3/bin:/opt/anaconda3/condabin"
+
+### for java
+export PATH="$PATH:Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/bin"
+
+### for js
+export PATH="$PATH:/Users/washi38/.nodebrew/current/bin"
+
+### for flutter
+export PATH="$PATH:$HOME/.pub-cache/bin"
+
