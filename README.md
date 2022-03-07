@@ -43,6 +43,15 @@ my disposable_env
 
 ### Macの環境設定(by CGI)
 
+- sshの設定
+
+  1. このprojectをclone
+  2. ```make genSshEnv```をうつ(pub keyがcopyされる)
+  3. githubのsettingからpubKeyを設定する
+  4. ```ssh -T git@github.com``` で疎通確認
+
+  
+
 - 必要なsoftwareのinstall
 
 
