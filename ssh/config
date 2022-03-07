@@ -1,0 +1,7 @@
+Host gitlab.example.com
+  User git
+  Port 22
+  HostName gitlab.jxpress.dev
+  TCPKeepAlive yes
+  identitiesonly yes
+  identityFile ~/.ssh/id_rsa
