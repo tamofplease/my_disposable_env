@@ -8,6 +8,7 @@ genSshEnv:
 
 
 .PHONY: prepare_zsh
+prepare_zsh:
 	mkdir -p ~/.zsh
 	mkdir -p ~/.zsh_config
 
@@ -18,8 +19,8 @@ set_zsh:
 
 .PHONY: load_zsh
 load_zsh:
-	cp ./zshrc ~/.zshrc
-	cp ./zsh_config/* ~/.zsh_config/
+	cp ./zsh/zshrc ~/.zshrc
+	cp ./zsh/zsh_config/* ~/.zsh_config/
 	source ~/.zshrc
 
 
