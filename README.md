@@ -63,9 +63,26 @@ my disposable_env
 
   ref: https://dev.macha795.com/zsh-prompt-customize/
   
+### 必要なtoolのinstall
 
-- 必要なsoftwareのinstall
 
 
-- 必要なtoolのinstall
+#### for Competitive Programming
+
+#### for develop frontEnd
+
+
+#### for develop backend
+
+
+#### for develop mobileApp
+
+#### for ML
+
+#### for research
+
+
+#### other
+
+
 
