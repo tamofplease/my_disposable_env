@@ -11,5 +11,6 @@ setZsh:
 	mkdir ~/.zsh ~/.zsh_config
 	cp ./zshrc ~/.zshrc
 	cp ./zsh_config/* ~/.zsh_config/
+	source ~/.zshrc
 
 
