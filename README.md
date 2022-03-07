@@ -50,6 +50,18 @@ my disposable_env
   3. githubのsettingからpubKeyを設定する
   4. ```ssh -T git@github.com``` で疎通確認
 
+
+- zshの設定
+
+  1. ```make prepare_zsh```でzshに必要なdirの作成
+  2. ```make load_zsh```で設定周りのファイルをcopy
+  3. ```source ~/.zshrc```で変更を反映
+
+  文字化けを治すために
+  1. ```make fix_font```
+  2. iterm2 > preference > profile > text > fontで Dejavu Sans mono for ....を選択する。
+
+  ref: https://dev.macha795.com/zsh-prompt-customize/
   
 
 - 必要なsoftwareのinstall
