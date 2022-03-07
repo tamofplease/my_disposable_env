@@ -23,7 +23,9 @@ load_zsh:
 	cp ./zsh/zshrc ~/.zshrc
 	cp ./zsh/zsh_config/* ~/.zsh_config/
 	cp -r ./zsh/completion ~/.zsh/
-	source ~/.zshrc
 
-
+.PHONY: fix_font
+fix_font:
+	cd ~/ && git clone https://github.com/powerline/fonts
+	~/fonts/install.sh
 
