@@ -6,6 +6,7 @@ my disposable_env
 - screen saverを切る
 
   1. SystemPreference => Battery => Battery => Turn display off after(=> Slide to Never)
+  2. SystemPreference => Desktop&Screen Saver => Screen Saver => remove check from ```Show Screen Saver after```
 
 - F1, F2などのキーを通常の標準のfnKeyとして利用するように設定する
 
