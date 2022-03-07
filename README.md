@@ -29,6 +29,8 @@ my disposable_env
 - bottomNavをdefaultで非表示にする
 
   1. SystemPreference > Dock & Menu Bar > Dock & Menu Bar
+  
+    <img src="https://user-images.githubusercontent.com/55216047/156952798-00974962-ef28-42cb-8d68-927209fbb5c6.png" height="200">
 
 ### 諸々install
 
