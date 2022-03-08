@@ -29,3 +29,10 @@ fix_font:
 	cd ~/ && git clone https://github.com/powerline/fonts
 	~/fonts/install.sh
 
+.PHONY: install_tool
+install_tool:
+	zsh tools/brew.sh
+
+.PHONY: install_commands
+install_commands:
+	zsh commands/brew.sh
