@@ -63,7 +63,22 @@ my disposable_env
 
   ref: https://dev.macha795.com/zsh-prompt-customize/
   
+### brew のinstall
+
+- [brew](https://brew.sh/)
+
 ### 必要なtoolのinstall
+
+- make 
+
+- VSCode ```brew install --cask visual-studio-code```
+
+- Clipy ```brew install --cask clipy```
+
+- Alfred ```brew install --cask alfred```
+
+- Docker ```brew install docker```
+- 
 
 
 
