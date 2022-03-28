@@ -36,3 +36,7 @@ install_tool:
 .PHONY: install_commands
 install_commands:
 	zsh commands/brew.sh
+
+.PHONY: install_cp
+install_cp:
+	zsh tools/atcoder.sh
