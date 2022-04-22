@@ -32,6 +32,7 @@ fix_font:
 .PHONY: install_tool
 install_tool:
 	zsh tools/brew.sh
+	cp tools/karabiner.json ~/.config/karabiner/karabiner.json
 
 .PHONY: install_commands
 install_commands:
