@@ -69,7 +69,7 @@ my disposable_env
 
 ### 必要なtoolのinstall
 
-- make 
+- make install_tool
 
 - VSCode ```brew install --cask visual-studio-code```
 
@@ -83,7 +83,7 @@ my disposable_env
 
 
 #### for Competitive Programming
-
+TBT
 #### for develop frontEnd
 
 
