@@ -32,6 +32,12 @@ my disposable_env
   1. SystemPreference > Dock & Menu Bar > Dock & Menu Bar
   
     <img src="https://user-images.githubusercontent.com/55216047/156952798-00974962-ef28-42cb-8d68-927209fbb5c6.png" height="200">
+    
+- keyboardのshortcut編集
+
+  1. SystemPreference > Keyboard > Shortcuts > App Shortcuts
+
+     ![Screen Shot 2022-04-29 at 10 41 02](https://user-images.githubusercontent.com/55216047/165873070-c842fddf-9e00-4299-8a5b-5f44bf7cb425.png)
 
 ### 手作業でinstall系
 
