@@ -9,3 +9,4 @@ brew install --cask karabiner-elements
 brew install scrcpy
 brew install android-platform-tools
 brew install docker
+brew install direnv
