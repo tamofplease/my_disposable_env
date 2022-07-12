@@ -6,4 +6,4 @@ brew install gnu-tar
 brew install gnu-sed
 brew install gnu-time
 brew install gnu-getopt
-
+brew install rust
