@@ -22,3 +22,5 @@ export PATH="$PATH:/Users/washi38/.nodebrew/current/bin"
 ### for flutter
 export PATH="$PATH:$HOME/.pub-cache/bin"
 
+### for Rust
+export PATH="$PATH:$HOME/.cargo/bin"
