@@ -1,0 +1,209 @@
+{
+	// Place your snippets for dart here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	"stles": {
+		"prefix": "stles",
+		"body": [
+			"///",
+			"class $1 extends StatelessWidget {",
+			"\t// ignore: public_member_api_docs",
+			"\tconst $1({ final Key? key }) : super(key: key);",
+			"",
+			"\t@override",
+			"\tWidget build(final BuildContext context) => Container();",
+			"}",
+			"",
+		]
+	},
+	"widget_test": {
+		"prefix": "w_fd",
+		"body": [
+			"final $1 $1 = tester.firstWidget(find.byType($1));"
+		]
+	},
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	},
+	"arg": {
+		"prefix": "arg",
+		"body": [
+			"_$1 = $1,",
+		]
+	},
+	"print": {
+		"prefix": "print",
+		"body": [
+		 "print(\"$1\");",
+		],
+		"description": "print",
+	   },
+	"MediaQuery": {
+	"prefix": "Media",
+	"body": [
+		"MediaQuery.of(context).$1;",
+	],
+	"description": "MediaQuery"
+	},
+	"height": {
+	"prefix": "Sheight",
+	"body": [
+		"SizedBox(height: $1),",
+	],
+	"description": "height",
+	},
+	"width": {
+	"prefix": "Switdh",
+	"body": [
+		"SizedBox(width: $1),",
+	],
+	"description": "width",
+	},
+	"Theme": {
+	"prefix": "Theme",
+	"body": [
+		"Theme.of(context).$1",
+	],
+	"description": "Theme",
+	},
+	"final String ": {
+	"prefix": "fs",
+	"body": [
+		"final String $1;"
+	],
+	},
+	"FullHookWidget": {
+	"prefix": "Hooks",
+	"body": [
+		"import 'package:flutter_hooks/flutter_hooks.dart';",
+		"import 'package:flutter/material.dart';",
+		"",
+		"class $1 extends HookWidget {",
+		"\tconst $1({Key key}) : super(key: key);",
+		"",
+		"\t@override",
+		"\tWidget build(BuildContext context){",
+		"\t\treturn Scaffold(",
+		"\t\t\tbody:",
+		"\t\t);",
+		"\t}",
+		"}",
+	],
+	},
+	"HookWidget": {
+	"prefix": "Hook",
+	"body": [
+		"class $1 extends HookWidget {",
+		"\tconst $1({Key? key}) : super(key: key);",
+		"",
+		"\t@override",
+		"\tWidget build(BuildContext context){",
+		"\t\treturn;",
+		"\t}",
+		"}",
+	],
+	},
+	"state": {
+	"prefix": "state",
+	"body": [
+		"import 'package:freezed_annotation/freezed_annotation.dart';",
+		"",
+		"part '${TM_FILENAME_BASE}.freezed.dart';",
+		"",
+		"@freezed",
+		"class $1State with _$$1State {",
+		"",
+		"\tconst factory $1State({",
+		"\t\t",
+		"\t}) = _$1State;",
+		"\tconst $1State._();",
+		"}"
+	],
+	},
+	"model": {
+	"prefix": "model",
+	"body": [
+		"import 'package:freezed_annotation/freezed_annotation.dart';",
+		"",
+		"part '${TM_FILENAME_BASE}.freezed.dart';",
+		"part '${TM_FILENAME_BASE}.g.dart';",
+		"",
+		"@freezed",
+		"class $1 with _$$1 {",
+		"",
+		"\tconst factory $1({",
+		"\t\t",
+		"\t}) = _$1;",
+		"\tconst $1._();",
+		"",
+		"\tfactory $1.fromJson(Map<String, dynamic> json) =>",
+		"_$$1FromJson(json);",
+		"}"
+	]
+	},
+	"controller": {
+	"prefix": "controller",
+	"body": [
+		"import 'package:hooks_riverpod/hooks_riverpod.dart';",
+		"",
+		"class $1Controller extends StateNotifier<$1State> {",
+		"\t$1Controller() : super(const $1State());",
+		"}"
+	]
+	},
+	"provider": {
+	"prefix": "provider",
+	"body": [
+		"import 'package:hooks_riverpod/hooks_riverpod.dart';",
+		"import 'package:oshiruco_app/controller/_controller.dart';",
+		"import 'package:oshiruco_app/state/_state/_state.dart'",
+		"",
+		"final ${TM_FILENAME_BASE} = StateNotifierProvider<$1Controller, $1State> (",
+		"\t(ref) => $1Controller()",
+		");"
+	]
+	},
+	"repository": {
+	"prefix": "repo",
+	"body": [
+		"",
+		"abstract class $1RepositoryInterface {",
+		"}",
+		"",
+		"class $1Repository  implements $1RepositoryInterface{",
+		"",
+		"}"
+	]
+	},
+	"useFuture": {
+	"prefix": "useFuture",
+	"body": [
+		"final controller = useProvider($1Provider.notifier);",
+		"final state = useProvider($1Provider);",
+		"final create = useMemoized(",
+		"\t() => controller.loadInitialData(),",
+		");",
+		"final snapshot = useFuture(create);",
+		"if (snapshot.hasError) {",
+		"\treturn const Text('error');",
+		"} else if (snapshot.connectionState == ConnectionState.done) {",
+		"",
+		"} else {",
+		"\t return const CircularProgressIndicator();",
+		"}"
+	]
+	},
+	"ext": {
+	"prefix": "ext",
+	"body": [
+		"import 'package:oshiruco_app/extension/$1_extension.dart';"
+	]
+	},
+}
