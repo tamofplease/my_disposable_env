@@ -90,11 +90,15 @@ my disposable_env
 
 #### for Competitive Programming
 
-1. VSCodeの設定
+1. VSCodeのlib設定
 
 - `xaver.clang-format`のinstall
 
 - `notskm.clang-tidy`のinstall
+
+2. VSCodeのsnippet設定
+
+- `make 
 
 #### for develop frontEnd
 
