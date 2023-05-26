@@ -41,3 +41,7 @@ install_commands:
 .PHONY: install_cp
 install_cp:
 	zsh tools/atcoder.sh
+
+.PHONY: run_all
+run_all:
+	zsh setup.sh
