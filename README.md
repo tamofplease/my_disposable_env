@@ -52,7 +52,7 @@ my disposable_env
 
   1. この project を clone
   2. `make genSshEnv`をうつ(pub key が copy される)
-  3. github の setting から pubKey を設定する
+  3. github の [setting](https://github.com/settings/keys) から pubKey を設定する
   4. `ssh -T git@github.com` で疎通確認
 
 - zsh の設定
