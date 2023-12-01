@@ -78,13 +78,6 @@ my disposable_env
 
 - VSCode `brew install --cask visual-studio-code`
 
-- Clipy `brew install --cask clipy`
-
-- Alfred `brew install --cask alfred`
-
-- Docker `brew install docker`
--
-
 #### for Competitive Programming
 
 1. VSCode の lib 設定
