@@ -63,23 +63,20 @@ if ! command -v rustup >/dev/null 2>&1; then
 fi
 
 # Node -> volta, plus pnpm & typescript managed by volta
+# (VOLTA_HOME / PATH / VOLTA_FEATURE_PNPM live in zsh/zshrc; set here for this run)
 brew install volta
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
-export VOLTA_FEATURE_PNPM=1   # enable volta-managed pnpm
-volta setup
+export VOLTA_FEATURE_PNPM=1
 volta install node
 volta install pnpm
 volta install typescript
-# persist the pnpm feature flag for interactive shells (idempotent)
-if ! grep -q 'VOLTA_FEATURE_PNPM' ~/.zshrc 2>/dev/null; then
-  echo 'export VOLTA_FEATURE_PNPM=1' >> ~/.zshrc
-fi
 
-### config files (config/ mirrors ~/.config)
+### dotfiles
+# zsh (zshrc wires up starship / volta / rustup; see zsh/zshrc)
+mkdir -p ~/.zsh
+cp "$SCRIPT_DIR/zsh/zshrc" ~/.zshrc
+cp -R "$SCRIPT_DIR/zsh/completion" ~/.zsh/
+# ~/.config (config/ mirrors it: starship.toml, karabiner.json, ...)
 mkdir -p ~/.config
 cp -R "$SCRIPT_DIR/config/." ~/.config/
-# enable starship in zsh (idempotent)
-if ! grep -q 'starship init zsh' ~/.zshrc 2>/dev/null; then
-  echo 'eval "$(starship init zsh)"' >> ~/.zshrc
-fi

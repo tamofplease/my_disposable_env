@@ -5,5 +5,16 @@ compinit -u
 
 export CLICOLOR=1
 
+# locally-installed tools (claude code, uv-managed tools, etc.)
+export PATH="$HOME/.local/bin:$PATH"
+
+# volta (node / pnpm / typescript)
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+export VOLTA_FEATURE_PNPM=1
+
+# rust (rustup)
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
+
 # prompt (starship)
-eval "$(starship init zsh)"
+command -v starship >/dev/null 2>&1 && eval "$(starship init zsh)"

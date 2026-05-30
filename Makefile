@@ -3,10 +3,6 @@ setup_github:
 	bash github.sh
 
 
-.PHONY: prepare_zsh
-prepare_zsh:
-	mkdir -p ~/.zsh
-
 .PHONY: set_zsh
 set_zsh:
 	cp ~/.zshrc ./zsh/zshrc
@@ -15,6 +11,7 @@ set_zsh:
 
 .PHONY: load_zsh
 load_zsh:
+	mkdir -p ~/.zsh
 	cp ./zsh/zshrc ~/.zshrc
 	cp -r ./zsh/completion ~/.zsh/
 	mkdir -p ~/.config

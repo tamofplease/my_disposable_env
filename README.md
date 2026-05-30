@@ -63,12 +63,14 @@ my disposable_env
 
 - zsh の設定
 
-  1. `make prepare_zsh`で zsh に必要な dir の作成
-  2. `make load_zsh`で設定周りのファイルを copy（zshrc / completion / starship.toml）
-  3. `source ~/.zshrc`で変更を反映
+  `make install`（= `install.sh`）が dotfiles も配置するので通常は追加作業不要:
+  `zsh/zshrc` → `~/.zshrc`、`zsh/completion` → `~/.zsh/`、`config/*` → `~/.config/`。
+  反映は `source ~/.zshrc` かターミナル再起動。
 
-  プロンプトは [starship](https://starship.rs/) を使用（`install.sh` で install 済み）。
-  設定は `config/starship.toml` → `~/.config/starship.toml`。
+  zsh だけ入れ直したいときは `make load_zsh`（同じファイルを copy するだけ）。
+
+  プロンプトは [starship](https://starship.rs/)。`zsh/zshrc` が starship / volta / rustup の
+  有効化を担う唯一のソースで、設定本体は `config/starship.toml` → `~/.config/starship.toml`。
 
   glyph を正しく表示するために Nerd Font を入れる
 
