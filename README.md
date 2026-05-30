@@ -60,7 +60,7 @@ my disposable_env
   3. `source ~/.zshrc`で変更を反映
 
   プロンプトは [starship](https://starship.rs/) を使用（`install.sh` で install 済み）。
-  設定は `zsh/starship.toml` → `~/.config/starship.toml`。
+  設定は `config/starship.toml` → `~/.config/starship.toml`。
 
   glyph を正しく表示するために Nerd Font を入れる
 

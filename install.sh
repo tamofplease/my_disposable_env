@@ -76,14 +76,10 @@ if ! grep -q 'VOLTA_FEATURE_PNPM' ~/.zshrc 2>/dev/null; then
   echo 'export VOLTA_FEATURE_PNPM=1' >> ~/.zshrc
 fi
 
-### starship prompt config
+### config files (config/ mirrors ~/.config)
 mkdir -p ~/.config
-cp "$SCRIPT_DIR/zsh/starship.toml" ~/.config/starship.toml
+cp -R "$SCRIPT_DIR/config/." ~/.config/
 # enable starship in zsh (idempotent)
 if ! grep -q 'starship init zsh' ~/.zshrc 2>/dev/null; then
   echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 fi
-
-### karabiner config
-mkdir -p ~/.config/karabiner
-cp "$SCRIPT_DIR/tools/karabiner.json" ~/.config/karabiner/karabiner.json

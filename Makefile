@@ -15,14 +15,14 @@ prepare_zsh:
 set_zsh:
 	cp ~/.zshrc ./zsh/zshrc
 	cp -rf ~/.zsh/* ./zsh/
-	cp ~/.config/starship.toml ./zsh/starship.toml
+	cp ~/.config/starship.toml ./config/starship.toml
 
 .PHONY: load_zsh
 load_zsh:
 	cp ./zsh/zshrc ~/.zshrc
 	cp -r ./zsh/completion ~/.zsh/
 	mkdir -p ~/.config
-	cp ./zsh/starship.toml ~/.config/starship.toml
+	cp -R ./config/. ~/.config/
 
 .PHONY: fix_font
 fix_font:
