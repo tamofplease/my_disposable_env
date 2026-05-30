@@ -29,3 +29,4 @@ nocall-corp/adm-nocall
 
 # --- MIX ---
 MIX-Inc/orista
+Augue-Inc/oripa-scraping
