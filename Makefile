@@ -10,24 +10,23 @@ genSshEnv:
 .PHONY: prepare_zsh
 prepare_zsh:
 	mkdir -p ~/.zsh
-	mkdir -p ~/.zsh_config
 
 .PHONY: set_zsh
 set_zsh:
-	cp ~/.zsh_config/* ./zsh/zsh_config
 	cp ~/.zshrc ./zsh/zshrc
 	cp -rf ~/.zsh/* ./zsh/
+	cp ~/.config/starship.toml ./zsh/starship.toml
 
 .PHONY: load_zsh
 load_zsh:
 	cp ./zsh/zshrc ~/.zshrc
-	cp ./zsh/zsh_config/* ~/.zsh_config/
 	cp -r ./zsh/completion ~/.zsh/
+	mkdir -p ~/.config
+	cp ./zsh/starship.toml ~/.config/starship.toml
 
 .PHONY: fix_font
 fix_font:
-	cd ~/ && git clone https://github.com/powerline/fonts
-	~/fonts/install.sh
+	brew install --cask font-hack-nerd-font
 
 .PHONY: install
 install:

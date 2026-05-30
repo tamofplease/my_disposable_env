@@ -1,0 +1,91 @@
+# Starship prompt config. Deployed to ~/.config/starship.toml (see `make load_zsh`).
+# Requires a Nerd Font for the glyphs (see README font section).
+
+add_newline = true
+
+format = """
+[](color_dir)\
+$directory\
+[](fg:color_dir bg:color_git)\
+$git_branch\
+$git_status\
+[](fg:color_git bg:color_lang)\
+$nodejs$python$rust$golang$java\
+[](fg:color_lang bg:color_cloud)\
+$aws$gcloud$kubernetes\
+[](fg:color_cloud)\
+$cmd_duration\
+$line_break\
+$character"""
+
+palette = "tokyo"
+
+[palettes.tokyo]
+color_dir = "#394260"
+color_git = "#212736"
+color_lang = "#1d2230"
+color_cloud = "#283655"
+
+[directory]
+style = "fg:#a0a9cb bg:color_dir"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+style = "bg:color_git"
+format = '[ $symbol $branch ](fg:#86aaec bg:color_git)'
+
+[git_status]
+style = "bg:color_git"
+format = '[$all_status$ahead_behind ](fg:#f38ba8 bg:color_git)'
+
+[nodejs]
+symbol = ""
+style = "bg:color_lang"
+format = '[ $symbol ($version) ](fg:#8cc265 bg:color_lang)'
+
+[python]
+symbol = ""
+style = "bg:color_lang"
+format = '[ $symbol ($version) ](fg:#f9e2af bg:color_lang)'
+
+[rust]
+symbol = ""
+style = "bg:color_lang"
+format = '[ $symbol ($version) ](fg:#fab387 bg:color_lang)'
+
+[golang]
+symbol = ""
+style = "bg:color_lang"
+format = '[ $symbol ($version) ](fg:#89dceb bg:color_lang)'
+
+[java]
+symbol = ""
+style = "bg:color_lang"
+format = '[ $symbol ($version) ](fg:#f38ba8 bg:color_lang)'
+
+[aws]
+symbol = ""
+style = "bg:color_cloud"
+format = '[ $symbol ($profile )(\($region\) )](fg:#f9e2af bg:color_cloud)'
+
+[gcloud]
+symbol = ""
+style = "bg:color_cloud"
+format = '[ $symbol ($project) ](fg:#89b4fa bg:color_cloud)'
+
+[kubernetes]
+symbol = "☸"
+disabled = false
+style = "bg:color_cloud"
+format = '[ $symbol $context ](fg:#89dceb bg:color_cloud)'
+
+[cmd_duration]
+min_time = 500
+format = '[ took $duration ](fg:#a0a9cb)'
+
+[character]
+success_symbol = '[❯](bold #86aaec)'
+error_symbol = '[❯](bold #f38ba8)'

@@ -56,15 +56,16 @@ my disposable_env
 - zsh の設定
 
   1. `make prepare_zsh`で zsh に必要な dir の作成
-  2. `make load_zsh`で設定周りのファイルを copy
+  2. `make load_zsh`で設定周りのファイルを copy（zshrc / completion / starship.toml）
   3. `source ~/.zshrc`で変更を反映
 
-  文字化けを治すために
+  プロンプトは [starship](https://starship.rs/) を使用（`install.sh` で install 済み）。
+  設定は `zsh/starship.toml` → `~/.config/starship.toml`。
 
-  1. `make fix_font`
-  2. Warp > Settings > Appearance > Text > Terminal font で Dejavu Sans Mono for Powerline 等を選択する。
+  glyph を正しく表示するために Nerd Font を入れる
 
-  ref: https://dev.macha795.com/zsh-prompt-customize/
+  1. `make fix_font`（Hack Nerd Font を install）
+  2. Warp > Settings > Appearance > Text > Terminal font で `Hack Nerd Font` を選択する。
 
 ### brew の install
 

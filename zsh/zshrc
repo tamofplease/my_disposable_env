@@ -1,3 +1,9 @@
-if [ -f ~/.zsh_config/styles ]; then
-. ~/.zsh_config/styles
-fi
+# completion
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit
+compinit -u
+
+export CLICOLOR=1
+
+# prompt (starship)
+eval "$(starship init zsh)"

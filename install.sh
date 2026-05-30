@@ -25,6 +25,7 @@ brew install --cask claude
 brew install git
 brew install gh
 brew install jq
+brew install starship
 brew install scrcpy
 brew install direnv
 brew install codex
