@@ -1,13 +1,7 @@
-Host gitlab.example.com
-  User git
-  Port 22
-  HostName gitlab.jxpress.dev
-  TCPKeepAlive yes
-  identitiesonly yes
-  identityFile ~/.ssh/keys/gitlab
-
 Host github.com
-  User git
-  Port 22
   HostName github.com
-  IdentityFile ~/.ssh/Keys/ed25519_git
+  User git
+  IdentityFile ~/.ssh/keys/ed25519_git
+  IdentitiesOnly yes
+  AddKeysToAgent yes
+  UseKeychain yes

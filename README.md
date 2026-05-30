@@ -46,12 +46,20 @@ my disposable_env
 
 ### Mac の環境設定(by CGI)
 
-- ssh の設定
+- GitHub / SSH / git の設定
 
   1. この project を clone
-  2. `make genSshEnv`をうつ(pub key が copy される)
-  3. github の [setting](https://github.com/settings/keys) から pubKey を設定する
-  4. `ssh -T git@github.com` で疎通確認
+  2. `make install`（`gh` を含む各種ツールを install）
+  3. `make setup_github` を実行する
+
+  `make setup_github`（= `github.sh`）が以下を一括でやる:
+
+  - git の identity / 便利な default（`init.defaultBranch=main`, `pull.rebase`,
+    `push.autoSetupRemote` 等）を設定
+  - ed25519 鍵を生成（既にあればスキップ）し、`~/.ssh/config` を配置
+  - 鍵を ssh-agent + macOS Keychain に登録
+  - `gh auth login`（未ログインなら）→ `gh ssh-key add` で公開鍵を GitHub に自動登録
+  - `ssh -T git@github.com` で疎通確認
 
 - zsh の設定
 

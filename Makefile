@@ -1,10 +1,6 @@
-.PHONY: genSshEnv
-genSshEnv:
-	[ -d ~/.ssh/ ] || mkdir ~/.ssh
-	[ -d ~/.ssh/keys ] || mkdir ~/.ssh/keys
-	ssh-keygen -t ed25519 -f ~/.ssh/keys/ed25519_git -C "riddimdubstep@yahoo.co.jp" -q -N ""
-	cp ./ssh/config ~/.ssh/config
-	cat ~/.ssh/keys/ed25519_git.pub | pbcopy
+.PHONY: setup_github
+setup_github:
+	bash github.sh
 
 
 .PHONY: prepare_zsh
