@@ -5,9 +5,27 @@
 #
 # Lines starting with # and blank lines are ignored.
 # Everything lands under ~/ghq/github.com/<owner>/<repo>.
+#
+# Scope: repos active since FY2026 (2026-04-01). Older ones intentionally omitted.
 
+# --- 個人 ---
 tamofplease/my_disposable_env
+tamofplease/qiqumo-next
 
-# --- examples (uncomment / edit) ---
-# tamofplease/some-personal-project
-# @your-company-org
+# --- Metasite (meta-site) ---
+meta-site/surveybridge
+meta-site/survey-engine
+meta-site/Surveybridge-copy
+meta-site/QIQUMO_SurveyBridge_AI
+meta-site/QIQUMO_SrB
+
+# --- macbee (macbee-planet) ---
+macbee-planet/lp-pro-source
+macbee-planet/monopoly-manifests
+
+# --- NoCall ---
+nocall-inc/topaz
+nocall-corp/adm-nocall
+
+# --- MIX ---
+MIX-Inc/orista
