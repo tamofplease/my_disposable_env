@@ -4,6 +4,8 @@ set -euo pipefail
 # Install CLI tools and applications for a fresh Mac.
 # macOS system defaults are handled separately by setup.sh.
 
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
 ### Homebrew
 if ! command -v brew >/dev/null 2>&1; then
   echo "==> Installing Homebrew"
@@ -20,6 +22,7 @@ brew install --cask zoom
 brew install --cask karabiner-elements
 brew install --cask docker-desktop
 brew install --cask claude
+brew install --cask font-hack-nerd-font
 
 ### CLI tools (Homebrew)
 brew install git
@@ -43,6 +46,14 @@ if ! command -v gcloud >/dev/null 2>&1; then
   curl https://sdk.cloud.google.com | bash
 fi
 
+### starship prompt config
+mkdir -p ~/.config
+cp "$SCRIPT_DIR/zsh/starship.toml" ~/.config/starship.toml
+# enable starship in zsh (idempotent)
+if ! grep -q 'starship init zsh' ~/.zshrc 2>/dev/null; then
+  echo 'eval "$(starship init zsh)"' >> ~/.zshrc
+fi
+
 ### karabiner config
 mkdir -p ~/.config/karabiner
-cp "$(dirname "$0")/tools/karabiner.json" ~/.config/karabiner/karabiner.json
+cp "$SCRIPT_DIR/tools/karabiner.json" ~/.config/karabiner/karabiner.json
