@@ -48,9 +48,11 @@ if ! command -v claude >/dev/null 2>&1; then
 fi
 
 ### Google Cloud SDK (native installer; keeps `gcloud components` usable)
+# CLOUDSDK_CORE_DISABLE_PROMPTS=1 -> non-interactive (installs to ~/google-cloud-sdk,
+# does not touch rc files); PATH/completion are sourced from zsh/zshrc.
 if ! command -v gcloud >/dev/null 2>&1; then
   echo "==> Installing Google Cloud SDK"
-  curl https://sdk.cloud.google.com | bash
+  CLOUDSDK_CORE_DISABLE_PROMPTS=1 bash -c "$(curl -fsSL https://sdk.cloud.google.com)"
 fi
 
 ### Language toolchains

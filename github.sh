@@ -27,9 +27,17 @@ if [ ! -f "$KEY" ]; then
   ssh-keygen -t ed25519 -f "$KEY" -C "$EMAIL" -q -N ""
 fi
 
-### ssh config
-cp "$SCRIPT_DIR/ssh/config" "$HOME/.ssh/config"
+### ssh config (drop our block into conf.d and Include it; never clobber ~/.ssh/config)
+mkdir -p "$HOME/.ssh/conf.d"
+cp "$SCRIPT_DIR/ssh/config" "$HOME/.ssh/conf.d/github.conf"
+chmod 600 "$HOME/.ssh/conf.d/github.conf"
+touch "$HOME/.ssh/config"
 chmod 600 "$HOME/.ssh/config"
+if ! grep -qF "Include conf.d/*.conf" "$HOME/.ssh/config"; then
+  printf 'Include conf.d/*.conf\n\n%s' "$(cat "$HOME/.ssh/config")" > "$HOME/.ssh/config.tmp"
+  mv "$HOME/.ssh/config.tmp" "$HOME/.ssh/config"
+  chmod 600 "$HOME/.ssh/config"
+fi
 
 ### load key into agent + macOS keychain
 eval "$(ssh-agent -s)" >/dev/null

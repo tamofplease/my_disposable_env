@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# macOS system defaults.
+# NOTE: 旧 macOS で検証したもの。Ventura 以降は "System Settings" へ改名され、
+# 一部のキー/挙動が変わっている可能性がある。メジャーアップデート後は要再確認。
+
 # 1. Screen Saverを切る
 defaults -currentHost write com.apple.screensaver idleTime 0
 

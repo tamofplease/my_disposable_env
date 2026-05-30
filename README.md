@@ -48,6 +48,9 @@ make all   # = install（ツール+dotfiles） → setup_github → run_all（ma
 
 ### Mac の環境設定(by GUI)
 
+> 注: 以下のメニュー名/パスは旧 macOS 基準。Ventura 以降は「System Preferences」→「System Settings」に
+> 改名され、項目の場所も一部変わっている。読み替えて設定すること。
+
 - screen saver を切る
 
   1. SystemPreference => Battery => Battery => Turn display off after(=> Slide to Never)

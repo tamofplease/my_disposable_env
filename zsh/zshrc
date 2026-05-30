@@ -16,6 +16,10 @@ export VOLTA_FEATURE_PNPM=1
 # rust (rustup)
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
+# gcloud (installed non-interactively to ~/google-cloud-sdk)
+[ -f "$HOME/google-cloud-sdk/path.zsh.inc" ] && . "$HOME/google-cloud-sdk/path.zsh.inc"
+[ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ] && . "$HOME/google-cloud-sdk/completion.zsh.inc"
+
 # prompt (starship)
 command -v starship >/dev/null 2>&1 && eval "$(starship init zsh)"
 

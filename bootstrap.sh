@@ -11,7 +11,8 @@ set -euo pipefail
 # this repo over HTTPS (no SSH key needed), then runs `make all`.
 
 REPO="https://github.com/tamofplease/my_disposable_env.git"
-DEST="$HOME/Workspace/my_disposable_env"
+# Clone into the ghq layout so it isn't duplicated when `make clone` runs later.
+DEST="$HOME/ghq/github.com/tamofplease/my_disposable_env"
 
 ### Homebrew (also installs Command Line Tools, i.e. git)
 if ! command -v brew >/dev/null 2>&1; then
