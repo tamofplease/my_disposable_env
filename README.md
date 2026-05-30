@@ -2,27 +2,48 @@
 
 my disposable_env
 
-## Quick start（新しい Mac で一発）
+## 新しい Mac でやること
 
-何もない Mac から:
+### 1. 自動セットアップ
+
+何もない Mac から、ターミナルで:
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/tamofplease/my_disposable_env/main/bootstrap.sh -o /tmp/bootstrap.sh
 bash /tmp/bootstrap.sh
 ```
 
-`bootstrap.sh` が Homebrew（= git も）導入 → この repo を **HTTPS で clone**（SSH 鍵不要）→ `make all` まで実行する。
+`bootstrap.sh` が **Homebrew（= git も）導入 → この repo を HTTPS で clone（SSH 鍵不要）→ `make all`** まで実行する。
+途中 `gh auth login` でブラウザ認証を求められる（GitHub への鍵登録のため）。
 
-既に repo を clone 済みなら:
+> - `curl | bash` のパイプ直結は避ける（`gh auth login` の対話入力が止まるため）。必ず `-o` で落としてから `bash` 実行。
+> - SSH 鍵が無くても public repo は HTTPS で clone できる（zip download 不要）。鍵は `make setup_github` が生成・GitHub 登録する。
+
+既に repo を clone 済みなら一発で:
 
 ```sh
 make all   # = install（ツール+dotfiles） → setup_github → run_all（macOS defaults）
 ```
 
-> SSH 鍵が無くても public repo は HTTPS で clone できる（zip download は不要）。
-> 鍵は clone 後に `make setup_github` が生成・GitHub 登録する。
+`make all` の内訳:
 
-セットアップ後に手動で残るのは GUI 設定（下記）とターミナルのフォント選択のみ。
+| 段階 | 内容 |
+| --- | --- |
+| `make install` | Homebrew / アプリ / CLI / 言語ツールチェイン / dotfiles 配置 / Nerd Font |
+| `make setup_github` | git identity・ed25519 鍵生成・`gh` で GitHub 登録・疎通確認 |
+| `make run_all` | macOS システム defaults（`setup.sh`） |
+
+### 2. 手動で必要な手順（自動化できない分）
+
+- [ ] **ターミナルのフォント**を `Hack Nerd Font` に変更（Warp > Settings > Appearance > Text > Terminal font）
+- [ ] `source ~/.zshrc` かターミナル再起動で反映
+- [ ] **GUI 設定**（screen saver / ショートカット / Dock 等）→ 下記「Mac の環境設定(by GUI)」を参照
+- [ ] **手動 install のアプリ**（Chrome 等）→ 下記「手作業で install 系」を参照
+- [ ] 任意: `uv python install 3.12` など、使う言語バージョンを入れる
+
+---
+
+以下は各手順の詳細。
 
 ### Mac の環境設定(by GUI)
 
@@ -126,6 +147,6 @@ brew ではなく native installer 経由で入れている。
 | --- | --- | --- |
 | Python | [uv](https://docs.astral.sh/uv/) | 版管理 + venv + pip/pipx を一元化。`uv python install 3.12` 等 |
 | Node | [volta](https://volta.sh/) | `package.json` にバージョンを pin |
-| pnpm | volta | `VOLTA_FEATURE_PNPM=1` を zshrc に追記して有効化 |
+| pnpm | volta | `VOLTA_FEATURE_PNPM=1`（`zsh/zshrc` に含む）で有効化 |
 | TypeScript | volta | `volta install typescript`（tsc 提供） |
 | Rust | [rustup](https://rustup.rs/) | toolchain/target/component を管理 |
