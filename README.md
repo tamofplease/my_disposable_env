@@ -88,14 +88,12 @@ brew ではなく native installer 経由で入れている。
 - VSCode `brew install --cask visual-studio-code`
 - Clipy `brew install --cask clipy`
 
-#### for develop frontEnd
+#### 言語ツールチェイン（`install.sh` に含む）
 
-#### for develop backend
-
-#### for develop mobileApp
-
-#### for ML
-
-#### for research
-
-#### other
+| 対象 | 管理ツール | 備考 |
+| --- | --- | --- |
+| Python | [uv](https://docs.astral.sh/uv/) | 版管理 + venv + pip/pipx を一元化。`uv python install 3.12` 等 |
+| Node | [volta](https://volta.sh/) | `package.json` にバージョンを pin |
+| pnpm | volta | `VOLTA_FEATURE_PNPM=1` を zshrc に追記して有効化 |
+| TypeScript | volta | `volta install typescript`（tsc 提供） |
+| Rust | [rustup](https://rustup.rs/) | toolchain/target/component を管理 |

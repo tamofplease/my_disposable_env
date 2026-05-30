@@ -32,10 +32,6 @@ fix_font:
 install:
 	bash install.sh
 
-.PHONY: install_commands
-install_commands:
-	zsh commands/brew.sh
-
 .PHONY: run_all
 run_all:
 	zsh setup.sh

@@ -33,6 +33,11 @@ brew install scrcpy
 brew install direnv
 brew install codex
 brew install awscli
+brew install gcc
+brew install gnu-tar
+brew install gnu-sed
+brew install gnu-time
+brew install gnu-getopt
 
 ### Claude Code (native installer; self-updates, so don't manage via brew)
 if ! command -v claude >/dev/null 2>&1; then
@@ -44,6 +49,31 @@ fi
 if ! command -v gcloud >/dev/null 2>&1; then
   echo "==> Installing Google Cloud SDK"
   curl https://sdk.cloud.google.com | bash
+fi
+
+### Language toolchains
+
+# Python -> uv (version manager + venv + pip/pipx replacement)
+brew install uv
+
+# Rust -> rustup (official toolchain manager)
+if ! command -v rustup >/dev/null 2>&1; then
+  echo "==> Installing rustup"
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+fi
+
+# Node -> volta, plus pnpm & typescript managed by volta
+brew install volta
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+export VOLTA_FEATURE_PNPM=1   # enable volta-managed pnpm
+volta setup
+volta install node
+volta install pnpm
+volta install typescript
+# persist the pnpm feature flag for interactive shells (idempotent)
+if ! grep -q 'VOLTA_FEATURE_PNPM' ~/.zshrc 2>/dev/null; then
+  echo 'export VOLTA_FEATURE_PNPM=1' >> ~/.zshrc
 fi
 
 ### starship prompt config
