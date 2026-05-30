@@ -29,18 +29,13 @@ fix_font:
 	cd ~/ && git clone https://github.com/powerline/fonts
 	~/fonts/install.sh
 
-.PHONY: install_tool
-install_tool:
-	zsh tools/brew.sh
-	cp tools/karabiner.json ~/.config/karabiner/karabiner.json
+.PHONY: install
+install:
+	bash install.sh
 
 .PHONY: install_commands
 install_commands:
 	zsh commands/brew.sh
-
-.PHONY: install_cp
-install_cp:
-	zsh tools/atcoder.sh
 
 .PHONY: run_all
 run_all:

@@ -40,6 +40,9 @@ my disposable_env
 
      ![Screen Shot 2022-04-29 at 10 41 02](https://user-images.githubusercontent.com/55216047/165873070-c842fddf-9e00-4299-8a5b-5f44bf7cb425.png)
 
+### 手作業で install 系
+
+- [chrome](https://www.google.com/chrome/?brand=CHBD&brand=SSPA&gclid=CjwKCAiA1JGRBhBSEiwAxXblwbR0wHVSOQkhO58aEsUIs-03iS6GZvxQlf2ahaO6oztFLXuzs84-phoCuCgQAvD_BwE&gclsrc=aw.ds)
 
 ### Mac の環境設定(by CGI)
 
@@ -59,7 +62,7 @@ my disposable_env
   文字化けを治すために
 
   1. `make fix_font`
-  2. iterm2 > preference > profile > text > font で Dejavu Sans mono for ....を選択する。
+  2. Warp > Settings > Appearance > Text > Terminal font で Dejavu Sans Mono for Powerline 等を選択する。
 
   ref: https://dev.macha795.com/zsh-prompt-customize/
 
@@ -67,23 +70,22 @@ my disposable_env
 
 - [brew](https://brew.sh/)
 
-### 必要な tool の install
+### 必要な tool / app の install
 
-- make install_tool
+各種 CLI・アプリ（Homebrew cask/formula + Claude Code・gcloud の native installer）は
+`install.sh` にまとまっている。
+
+```sh
+make install   # = bash install.sh
+```
+
+中身は `install.sh` を参照。Claude Code と gcloud は自己アップデート/コンポーネント管理の都合で
+brew ではなく native installer 経由で入れている。
+
+任意で追加するもの:
 
 - VSCode `brew install --cask visual-studio-code`
-
-#### for Competitive Programming
-
-1. VSCode の lib 設定
-
-- `xaver.clang-format`の install
-
-- `notskm.clang-tidy`の install
-
-2. VSCode の snippet 設定
-
-- `make install_cp
+- Clipy `brew install --cask clipy`
 
 #### for develop frontEnd
 
