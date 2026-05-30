@@ -2,6 +2,28 @@
 
 my disposable_env
 
+## Quick start（新しい Mac で一発）
+
+何もない Mac から:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/tamofplease/my_disposable_env/main/bootstrap.sh -o /tmp/bootstrap.sh
+bash /tmp/bootstrap.sh
+```
+
+`bootstrap.sh` が Homebrew（= git も）導入 → この repo を **HTTPS で clone**（SSH 鍵不要）→ `make all` まで実行する。
+
+既に repo を clone 済みなら:
+
+```sh
+make all   # = install（ツール+dotfiles） → setup_github → run_all（macOS defaults）
+```
+
+> SSH 鍵が無くても public repo は HTTPS で clone できる（zip download は不要）。
+> 鍵は clone 後に `make setup_github` が生成・GitHub 登録する。
+
+セットアップ後に手動で残るのは GUI 設定（下記）とターミナルのフォント選択のみ。
+
 ### Mac の環境設定(by GUI)
 
 - screen saver を切る

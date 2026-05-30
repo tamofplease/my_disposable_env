@@ -1,3 +1,8 @@
+# One-shot: tools + dotfiles, then GitHub/SSH/git, then macOS defaults.
+# Run from a Terminal so `gh auth login` can prompt interactively.
+.PHONY: all
+all: install setup_github run_all
+
 .PHONY: setup_github
 setup_github:
 	bash github.sh
