@@ -27,6 +27,8 @@ brew install --cask font-hack-nerd-font
 ### CLI tools (Homebrew)
 brew install git
 brew install gh
+brew install ghq
+brew install fzf
 brew install jq
 brew install starship
 brew install scrcpy

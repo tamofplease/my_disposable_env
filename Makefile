@@ -7,6 +7,11 @@ all: install setup_github run_all
 setup_github:
 	bash github.sh
 
+# Clone repos listed in repos.txt into ~/ghq (run after setup_github).
+.PHONY: clone
+clone:
+	bash clone.sh
+
 
 .PHONY: set_zsh
 set_zsh:

@@ -1,0 +1,13 @@
+# Repos to clone via ghq (`make clone`). One entry per line.
+#
+#   owner/repo   -> clone that single repo
+#   @owner       -> clone every repo under that owner/org (needs gh auth)
+#
+# Lines starting with # and blank lines are ignored.
+# Everything lands under ~/ghq/github.com/<owner>/<repo>.
+
+tamofplease/my_disposable_env
+
+# --- examples (uncomment / edit) ---
+# tamofplease/some-personal-project
+# @your-company-org

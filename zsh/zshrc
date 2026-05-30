@@ -18,3 +18,15 @@ export VOLTA_FEATURE_PNPM=1
 
 # prompt (starship)
 command -v starship >/dev/null 2>&1 && eval "$(starship init zsh)"
+
+# ghq + fzf: jump to any cloned repo with Ctrl-]
+if command -v ghq >/dev/null 2>&1 && command -v fzf >/dev/null 2>&1; then
+  function _ghq_fzf_widget() {
+    local dir
+    dir=$(ghq list | fzf) || return
+    BUFFER="cd $(ghq root)/${dir}"
+    zle accept-line
+  }
+  zle -N _ghq_fzf_widget
+  bindkey '^]' _ghq_fzf_widget
+fi

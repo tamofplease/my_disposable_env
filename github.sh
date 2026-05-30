@@ -41,6 +41,7 @@ if command -v gh >/dev/null 2>&1; then
     echo "==> Logging in to GitHub"
     gh auth login
   fi
+  gh auth setup-git   # HTTPS credential helper (lets ghq clone private repos)
   echo "==> Registering SSH key on GitHub"
   gh ssh-key add "$KEY.pub" --title "$(hostname)" 2>/dev/null \
     || echo "  (key already registered, skipping)"

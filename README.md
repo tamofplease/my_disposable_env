@@ -40,6 +40,7 @@ make all   # = install（ツール+dotfiles） → setup_github → run_all（ma
 - [ ] **GUI 設定**（screen saver / ショートカット / Dock 等）→ 下記「Mac の環境設定(by GUI)」を参照
 - [ ] **手動 install のアプリ**（Chrome 等）→ 下記「手作業で install 系」を参照
 - [ ] 任意: `uv python install 3.12` など、使う言語バージョンを入れる
+- [ ] 任意: `make clone` で作業 repo を一括配置（`repos.txt` を編集しておく → 下記「repo の配置」）
 
 ---
 
@@ -150,3 +151,18 @@ brew ではなく native installer 経由で入れている。
 | pnpm | volta | `VOLTA_FEATURE_PNPM=1`（`zsh/zshrc` に含む）で有効化 |
 | TypeScript | volta | `volta install typescript`（tsc 提供） |
 | Rust | [rustup](https://rustup.rs/) | toolchain/target/component を管理 |
+
+### repo の配置（ghq）
+
+作業 repo は [ghq](https://github.com/x-motemen/ghq) で `~/ghq/github.com/<owner>/<repo>` に統一配置する。
+会社ごとに手でフォルダを切らなくても **org 名で自動的に分かれる**（GitHub アカウントが同じでも org が違えば別ディレクトリ）。
+
+```sh
+# 1. clone したい repo / org を repos.txt に書く
+#      owner/repo  -> その repo
+#      @owner      -> その owner/org の全 repo
+# 2. 一括 clone
+make clone
+```
+
+clone 後の移動は zsh で **`Ctrl-]`**（`ghq list | fzf` で選択 → cd）。手動なら `ghq get <owner/repo>`。
