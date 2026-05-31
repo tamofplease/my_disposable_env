@@ -38,7 +38,7 @@ make all   # = install（ツール+dotfiles） → setup_github → run_all（ma
 - [ ] **ターミナルのフォント**を `Hack Nerd Font` に変更（Warp > Settings > Appearance > Text > Terminal font）
 - [ ] `source ~/.zshrc` かターミナル再起動で反映
 - [ ] **GUI 設定**（screen saver / ショートカット / Dock 等）→ 下記「Mac の環境設定(by GUI)」を参照
-- [ ] **手動 install のアプリ**（Chrome 等）→ 下記「手作業で install 系」を参照
+- [ ] **手動 install のアプリ**（Dia 等、brew 未対応のもの）→ 下記「手作業で install 系」を参照
 - [ ] 任意: `uv python install 3.12` など、使う言語バージョンを入れる
 - [ ] 任意: `make clone` で作業 repo を一括配置（`repos.txt` を編集しておく → 下記「repo の配置」）
 
@@ -89,7 +89,10 @@ make all   # = install（ツール+dotfiles） → setup_github → run_all（ma
 
 ### 手作業で install 系
 
-- [chrome](https://www.google.com/chrome/?brand=CHBD&brand=SSPA&gclid=CjwKCAiA1JGRBhBSEiwAxXblwbR0wHVSOQkhO58aEsUIs-03iS6GZvxQlf2ahaO6oztFLXuzs84-phoCuCgQAvD_BwE&gclsrc=aw.ds)
+ブラウザ（Chrome / Arc / ChatGPT Atlas / Comet）は `install.sh` で自動 install 済み。
+brew に無いものだけ手動:
+
+- [Dia](https://www.diabrowser.com/)（Arc 後継の AI ブラウザ。brew 未対応）
 
 ### Mac の環境設定(by CGI)
 

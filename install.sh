@@ -24,6 +24,12 @@ brew install --cask docker-desktop
 brew install --cask claude
 brew install --cask font-hack-nerd-font
 
+### Browsers
+brew install --cask google-chrome   # DevTools の土台
+brew install --cask arc             # 好みの UX（メンテモードだが利用可）
+brew install --cask chatgpt-atlas   # OpenAI 純正の AI ブラウザ
+brew install --cask comet           # Perplexity の AI ブラウザ
+
 ### CLI tools (Homebrew)
 brew install git
 brew install gh
