@@ -13,6 +13,7 @@ if ! command -v brew >/dev/null 2>&1; then
 fi
 
 ### GUI apps (Homebrew Cask)
+brew install --cask 1password
 brew install --cask zed
 brew install --cask warp
 brew install --cask raycast
@@ -20,7 +21,7 @@ brew install --cask slack
 brew install --cask figma
 brew install --cask zoom
 brew install --cask karabiner-elements
-brew install --cask docker-desktop
+brew install --cask orbstack
 brew install --cask claude
 brew install --cask font-hack-nerd-font
 
@@ -31,6 +32,7 @@ brew install --cask chatgpt-atlas   # OpenAI 純正の AI ブラウザ
 brew install --cask comet           # Perplexity の AI ブラウザ
 
 ### CLI tools (Homebrew)
+brew install --cask 1password-cli  # `op` command; integrates with the 1Password app
 brew install git
 brew install gh
 brew install ghq
